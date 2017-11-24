@@ -1,0 +1,42 @@
+#pragma once
+#include "BoardManager.h"
+#include <iostream>
+
+
+BoardManager::BoardManager(int columns, int rows): mBoard(columns, rows), solvedBoard(columns, rows)
+{
+	SetOrederedValues();
+}
+
+void BoardManager::RandomizeValues()
+{
+}
+
+void BoardManager::SetOrederedValues()
+{
+	uint16_t count = 1;
+	for (int i = 0 ; i < mBoard.GetColumnSize(); ++i)
+	{
+		for (int j = 0; j < mBoard.GetRowSize(); ++j)
+		{
+			mBoard.SetIndex(i,j,count);
+			solvedBoard.SetIndex(i, j, count);
+				count++;
+		}
+	}
+	mBoard.SetIndex(mBoard.GetColumnSize() - 1, mBoard.GetRowSize() - 1, 0);
+	solvedBoard.SetIndex(mBoard.GetColumnSize() - 1, mBoard.GetRowSize() - 1, 0);
+			
+}
+
+void BoardManager::Display()
+{
+	for (int i = 0; i < mBoard.GetColumnSize(); ++i)
+	{
+		for (int j = 0; j < mBoard.GetRowSize(); ++j)
+		{
+			std::cout << mBoard.GetIndex(i, j) << " ";
+		}
+		std::cout << "\n";
+	}
+}
