@@ -21,36 +21,36 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Pietnastka\Board.cpp">
+    <ClCompile Include="Board.cpp">
       <Filter>Source Files\Classes</Filter>
     </ClCompile>
-    <ClCompile Include="..\Pietnastka\BoardManager.cpp">
+    <ClCompile Include="BoardManager.cpp">
       <Filter>Source Files\Classes</Filter>
     </ClCompile>
-    <ClCompile Include="..\Pietnastka\FileLoader.cpp">
+    <ClCompile Include="FileLoader.cpp">
       <Filter>Source Files\Classes</Filter>
     </ClCompile>
-    <ClCompile Include="..\Pietnastka\Logic.cpp">
+    <ClCompile Include="Index.cpp">
       <Filter>Source Files\Classes</Filter>
     </ClCompile>
-    <ClCompile Include="..\Pietnastka\Index.cpp">
+    <ClCompile Include="Logic.cpp">
       <Filter>Source Files\Classes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Pietnastka\Board.h">
+    <ClInclude Include="Board.h">
       <Filter>Source Files\Classes</Filter>
     </ClInclude>
-    <ClInclude Include="..\Pietnastka\BoardManager.h">
+    <ClInclude Include="BoardManager.h">
       <Filter>Source Files\Classes</Filter>
     </ClInclude>
-    <ClInclude Include="..\Pietnastka\FileLoader.h">
+    <ClInclude Include="FileLoader.h">
       <Filter>Source Files\Classes</Filter>
     </ClInclude>
-    <ClInclude Include="..\Pietnastka\Logic.h">
+    <ClInclude Include="Index.h">
       <Filter>Source Files\Classes</Filter>
     </ClInclude>
-    <ClInclude Include="..\Pietnastka\Index.h">
+    <ClInclude Include="Logic.h">
       <Filter>Source Files\Classes</Filter>
     </ClInclude>
   </ItemGroup>

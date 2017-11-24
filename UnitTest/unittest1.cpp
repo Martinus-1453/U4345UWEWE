@@ -11,8 +11,9 @@ namespace UnitTest
 		
 		TEST_METHOD(TestMethod1)
 		{
+			int i = 1, j = 1;
 			// TODO: Your test code here
-			Assert::AreEqual(expectedValue, actualValue);
+			Assert::AreEqual(i, j);
 		}
 
 	};

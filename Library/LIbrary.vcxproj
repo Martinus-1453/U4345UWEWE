@@ -132,18 +132,18 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Pietnastka\Board.cpp" />
-    <ClCompile Include="..\Pietnastka\BoardManager.cpp" />
-    <ClCompile Include="..\Pietnastka\FileLoader.cpp" />
-    <ClCompile Include="..\Pietnastka\Index.cpp" />
-    <ClCompile Include="..\Pietnastka\Logic.cpp" />
+    <ClCompile Include="Board.cpp" />
+    <ClCompile Include="BoardManager.cpp" />
+    <ClCompile Include="FileLoader.cpp" />
+    <ClCompile Include="Index.cpp" />
+    <ClCompile Include="Logic.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Pietnastka\Board.h" />
-    <ClInclude Include="..\Pietnastka\BoardManager.h" />
-    <ClInclude Include="..\Pietnastka\FileLoader.h" />
-    <ClInclude Include="..\Pietnastka\Index.h" />
-    <ClInclude Include="..\Pietnastka\Logic.h" />
+    <ClInclude Include="Board.h" />
+    <ClInclude Include="BoardManager.h" />
+    <ClInclude Include="FileLoader.h" />
+    <ClInclude Include="Index.h" />
+    <ClInclude Include="Logic.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

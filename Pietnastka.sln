@@ -3,13 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Pietnastka", "Pietnastka\Pietnastka.vcxproj", "{68D3D566-8D0A-4B68-9517-67CAE01C3E46}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnitTest", "UnitTest\UnitTest.vcxproj", "{B21D7E52-00AC-4E9E-ABE8-58727E91E4DA}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Console", "Console\Console.vcxproj", "{7F0DC019-BF13-4E94-B40B-34A3866A6116}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Library", "LIbrary\LIbrary.vcxproj", "{7B16AE8A-CECF-4C12-AE0D-1CB30C7C4382}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Library", "Library\LIbrary.vcxproj", "{7B16AE8A-CECF-4C12-AE0D-1CB30C7C4382}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +17,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{68D3D566-8D0A-4B68-9517-67CAE01C3E46}.Debug|x64.ActiveCfg = Debug|x64
-		{68D3D566-8D0A-4B68-9517-67CAE01C3E46}.Debug|x64.Build.0 = Debug|x64
-		{68D3D566-8D0A-4B68-9517-67CAE01C3E46}.Debug|x86.ActiveCfg = Debug|Win32
-		{68D3D566-8D0A-4B68-9517-67CAE01C3E46}.Debug|x86.Build.0 = Debug|Win32
-		{68D3D566-8D0A-4B68-9517-67CAE01C3E46}.Release|x64.ActiveCfg = Release|x64
-		{68D3D566-8D0A-4B68-9517-67CAE01C3E46}.Release|x64.Build.0 = Release|x64
-		{68D3D566-8D0A-4B68-9517-67CAE01C3E46}.Release|x86.ActiveCfg = Release|Win32
-		{68D3D566-8D0A-4B68-9517-67CAE01C3E46}.Release|x86.Build.0 = Release|Win32
 		{B21D7E52-00AC-4E9E-ABE8-58727E91E4DA}.Debug|x64.ActiveCfg = Debug|x64
 		{B21D7E52-00AC-4E9E-ABE8-58727E91E4DA}.Debug|x64.Build.0 = Debug|x64
 		{B21D7E52-00AC-4E9E-ABE8-58727E91E4DA}.Debug|x86.ActiveCfg = Debug|Win32
