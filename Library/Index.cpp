@@ -24,6 +24,18 @@ Index& Index::operator=(Index other)
 	return *this;
 }
 
+bool Index::operator==(const Index & b) const
+{
+	if (GetRow() == b.GetRow() && GetColumn() == b.GetColumn()) return true;
+	return false;
+}
+
+bool Index::operator!=(const Index & b) const
+{
+	if (GetRow() == b.GetRow() && GetColumn() == b.GetColumn()) return false;
+	return true;
+}
+
 int Index::GetColumn() const
 {
 	return column;

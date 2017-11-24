@@ -9,6 +9,8 @@ public:
 	Index(const Index& index);
 	Index(int _x, int _y);
 	Index& operator=(Index other);
+	bool Index::operator==(const Index &b) const;
+	bool Index::operator!=(const Index &b) const;
 
 	int GetColumn() const;
 	int GetRow() const;
