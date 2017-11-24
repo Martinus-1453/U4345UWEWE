@@ -23,14 +23,36 @@ int Board::GetRowSize()
 	return sizeRow;
 }
 
-int Board::GetIndex(const int column, const int row)
+uint16_t Board::GetIndex(const int column, const int row)
 {
 	if (column < GetColumnSize() && row < GetRowSize())
 	return boardData[(column*GetColumnSize()) + row];
+}
+
+std::vector<uint16_t> Board::GetRow(const int columnNumber)
+{
+	if(columnNumber < GetColumnSize())
+	{
+		std::vector<uint16_t>::const_iterator first = boardData.begin() + columnNumber * GetRowSize();
+		std::vector<uint16_t>::const_iterator last = boardData.begin() + columnNumber * GetRowSize() + GetRowSize();
+		return std::vector<uint16_t>(first, last);
+	}
+	return std::vector<uint16_t>();
 }
 
 void Board::SetIndex(const int column, const int row, uint16_t value)
 {
 	if (column < GetColumnSize() && row < GetRowSize())
 		boardData[(column*GetColumnSize()) + row] = value;
+}
+
+void Board::SetRow(const int columnNumber, std::vector<uint16_t> row)
+{
+	if (columnNumber < GetColumnSize())
+	{
+		for (int i = 0; i < row.size(); ++i)
+		{
+			SetIndex(columnNumber, i, row[i]);
+		}
+	}
 }

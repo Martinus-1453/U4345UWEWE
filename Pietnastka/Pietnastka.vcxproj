@@ -149,11 +149,13 @@
   <ItemGroup>
     <ClInclude Include="Board.h" />
     <ClInclude Include="BoardManager.h" />
+    <ClInclude Include="FileLoader.h" />
     <ClInclude Include="Logic.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Board.cpp" />
     <ClCompile Include="BoardManager.cpp" />
+    <ClCompile Include="FileLoader.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Logic.cpp" />
   </ItemGroup>

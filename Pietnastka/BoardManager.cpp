@@ -5,6 +5,11 @@ BoardManager::BoardManager(int columns, int rows): mBoard(columns, rows), solved
 	SetOrederedValues();
 }
 
+BoardManager::BoardManager(std::string boardPath, std::string solvePath): mBoard(4, 4), solvedBoard(4, 4)
+{
+
+}
+
 void BoardManager::RandomizeValues()
 {
 }
