@@ -1,7 +1,4 @@
-#pragma once
 #include "BoardManager.h"
-#include <iostream>
-
 
 BoardManager::BoardManager(int columns, int rows): mBoard(columns, rows), solvedBoard(columns, rows)
 {

@@ -1,5 +1,4 @@
-﻿#include "stdafx.h"
-#include "Board.h"
+﻿#include "Board.h"
 
 Board::Board(const int _sizeHorizontal, const int _sizeVertical) : boardData(_sizeHorizontal*_sizeVertical)
 {
