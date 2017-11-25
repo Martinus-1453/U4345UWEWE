@@ -1,13 +1,13 @@
 #include "BoardManager.h"
 
-BoardManager::BoardManager(int columns, int rows): mBoard(columns, rows), solvedBoard(columns, rows)
+
+BoardManager::BoardManager(int columns, int rows): mBoard(columns, rows), solvedBoard(columns, rows), currentSolver(nullptr), BFS(mBoard, solvedBoard)
 {
 	SetOrederedValues();
 }
 
-BoardManager::BoardManager(std::string boardPath, std::string solvePath): mBoard(4, 4), solvedBoard(4, 4)
+BoardManager::BoardManager(std::string boardPath, std::string solvePath): mBoard(4, 4), solvedBoard(4, 4), currentSolver(nullptr), BFS(mBoard,solvedBoard)
 {
-
 }
 
 void BoardManager::RandomizeValues()
@@ -22,6 +22,11 @@ void BoardManager::SetBoard(std::string path)
 	solvedBoard.SetSizeRow(mBoard.GetRowSize());
 	solvedBoard.ResizeBoardData();
 	InitBoardValues(solvedBoard);
+}
+
+void BoardManager::SetSolver(Solver* newSolver)
+{
+	currentSolver = newSolver;
 }
 
 void BoardManager::SetOrederedValues()

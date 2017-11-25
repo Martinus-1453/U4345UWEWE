@@ -16,6 +16,9 @@
     <Filter Include="Source Files\Classes">
       <UniqueIdentifier>{1bc48aba-fb57-4995-99fc-29a72f0e2114}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Classes\Solver">
+      <UniqueIdentifier>{a04bb6dc-7890-4577-85f9-fd24395a754d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -36,6 +39,12 @@
     <ClCompile Include="Logic.cpp">
       <Filter>Source Files\Classes</Filter>
     </ClCompile>
+    <ClCompile Include="Solver.cpp">
+      <Filter>Source Files\Classes\Solver</Filter>
+    </ClCompile>
+    <ClCompile Include="SolverBFS.cpp">
+      <Filter>Source Files\Classes\Solver</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Board.h">
@@ -52,6 +61,12 @@
     </ClInclude>
     <ClInclude Include="Logic.h">
       <Filter>Source Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="SolverBFS.h">
+      <Filter>Source Files\Classes\Solver</Filter>
+    </ClInclude>
+    <ClInclude Include="Solver.h">
+      <Filter>Source Files\Classes\Solver</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

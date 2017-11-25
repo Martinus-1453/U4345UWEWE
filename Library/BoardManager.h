@@ -4,10 +4,13 @@
 #include "Board.h"
 #include "Logic.h"
 #include "FileLoader.h"
+#include "Solver.h"
+// Solve Methods
+#include "SolverBFS.h"
 
+//
 #include <iostream>
 #include <string>
-
 
 class BoardManager
 {
@@ -26,12 +29,24 @@ public:
 		//mBoard.SetRow(1, mBoard.GetRow(0));
 	}
 
+	void BFSTest()
+	{
+		SolverBFS* p = &BFS;
+		SetSolver(p);
+	}
+
 	void SetBoard(std::string path);
+
+	void SetSolver(Solver* newSolver);
 
 private:
 	Board mBoard;
 	Board solvedBoard;
+	Solver* currentSolver;
+	// Solvers
+	SolverBFS BFS;
 
+	//
 	void SetOrederedValues();
 	void InitBoardValues(Board& board);
 };
