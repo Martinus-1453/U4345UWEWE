@@ -33,6 +33,7 @@ private:
 	Board solvedBoard;
 
 	void SetOrederedValues();
+	void InitBoardValues(Board& board);
 };
 
 #endif // BOARDMANAGER_H

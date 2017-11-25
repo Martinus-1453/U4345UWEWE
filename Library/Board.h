@@ -32,6 +32,8 @@ public:
 	void SetSizeColumn(const int _sizeColumn);
 	void SetSizeRow(const int _sizeRow);
 
+	void ResizeBoardData();
+
 private:
 	int sizeColumn, sizeRow;
 	std::vector<uint16_t> boardData;

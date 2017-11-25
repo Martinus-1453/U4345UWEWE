@@ -15,8 +15,10 @@ void FileLoader::LoadFile(std::string path, Board& board) {
 	inputReader.open(path, std::ios::in);
 	if (inputReader.good()) {
 		inputReader >> x >> y;
+		
 		board.SetSizeColumn(x);
 		board.SetSizeRow(y);
+		board.ResizeBoardData();
 
 		for (int i = 0; i < x; i++) {
 			row.clear();
@@ -31,3 +33,4 @@ void FileLoader::LoadFile(std::string path, Board& board) {
 
 	inputReader.close();
 }
+

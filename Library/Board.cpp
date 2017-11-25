@@ -112,3 +112,8 @@ void Board::SetSizeRow(const int _sizeRow)
 {
 	this->sizeRow = _sizeRow;
 }
+
+void Board::ResizeBoardData()
+{
+	this->boardData.resize(sizeRow*sizeColumn);
+}
