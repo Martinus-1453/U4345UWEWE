@@ -16,7 +16,7 @@ void BoardManager::RandomizeValues()
 
 void BoardManager::SetBoard(std::string path)
 {
-	FileLoader::LoadFile(path, mBoard);
+	mBoard = FileLoader::LoadFile(path);
 }
 
 void BoardManager::SetOrederedValues()
