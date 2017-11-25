@@ -14,7 +14,8 @@ Board& Board::operator=(Board other)
 {
 	std::swap(sizeColumn, other.sizeColumn);
 	std::swap(sizeRow, other.sizeRow);
-	std::copy(other.boardData.begin(), other.boardData.end(), back_inserter(boardData));
+	//std::copy(other.boardData.begin(), other.boardData.end(), back_inserter(boardData));
+	boardData = other.boardData;
 	return *this;
 }
 
