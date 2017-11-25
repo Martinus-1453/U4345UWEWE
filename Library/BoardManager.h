@@ -6,6 +6,7 @@
 #include "FileLoader.h"
 
 #include <iostream>
+#include <string>
 
 
 class BoardManager
@@ -20,10 +21,12 @@ public:
 
 	void MoveTest()
 	{
-		//Logic::Move(&mBoard, Direction::D, 0, 0);
-		//Logic::Move(&mBoard, Direction::R, 1, 0);
-		mBoard.SetRow(1, mBoard.GetRow(0));
+		Logic::Move(&mBoard, Direction::D, 0, 0);
+		Logic::Move(&mBoard, Direction::R, 1, 0);
+		//mBoard.SetRow(1, mBoard.GetRow(0));
 	}
+
+	void SetBoard(std::string path);
 
 private:
 	Board mBoard;

@@ -14,6 +14,11 @@ void BoardManager::RandomizeValues()
 {
 }
 
+void BoardManager::SetBoard(std::string path)
+{
+	FileLoader::LoadFile(path, mBoard);
+}
+
 void BoardManager::SetOrederedValues()
 {
 	uint16_t count = 1;
