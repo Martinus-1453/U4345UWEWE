@@ -29,6 +29,8 @@ public:
 	void SetIndex(const int column, const int row, uint16_t value);
 	void SetIndex(Index index, uint16_t value);
 	void SetRow(const int number, std::vector<uint16_t> row);
+	void SetSizeColumn(const int _sizeColumn);
+	void SetSizeRow(const int _sizeRow);
 
 private:
 	int sizeColumn, sizeRow;

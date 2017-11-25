@@ -102,3 +102,13 @@ void Board::SetRow(const int columnNumber, std::vector<uint16_t> row)
 		}
 	}
 }
+
+void Board::SetSizeColumn(const int _sizeColumn)
+{
+	this->sizeColumn = _sizeColumn;
+}
+
+void Board::SetSizeRow(const int _sizeRow)
+{
+	this->sizeRow = _sizeRow;
+}

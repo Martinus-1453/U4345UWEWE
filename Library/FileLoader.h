@@ -11,7 +11,7 @@ class FileLoader
 {
 public:
 	FileLoader();
-	static Board LoadFile(std::string path);
+	static void LoadFile(std::string path, Board& board);
 };
 
 #endif // FILELOADER_H
