@@ -5,6 +5,7 @@
 #include <string>
 
 #include "Index.h"
+class Board;
 
 class Board
 {
@@ -24,6 +25,11 @@ public:
 	uint16_t GetIndexValue(Index point);
 
 	std::vector<uint16_t> GetRow(const int columnNumber);
+
+	int getDepth() { return depth; }
+	int getTotalCost() { return totalCost; }
+	int getCost() { return cost; }
+	Board getParent() { return parent; }
 	
 	// Setters
 	void SetIndex(const int column, const int row, uint16_t value);
@@ -34,9 +40,28 @@ public:
 
 	void ResizeBoardData();
 
+	void setDepth(int _depth) { this->depth = _depth; }
+	void setCost(int _cost) { this->cost = _cost; }
+	void setTotalCost(int _totalCost) { this->totalCost = _totalCost; }
+	void setParent(Board _parent) { this->parent = _parent; }
+
+	Board GetDownChild();
+	Board GetLeftChild();
+	Board GeRightChild();
+	Board GetUpChild();
+
 private:
 	int sizeColumn, sizeRow;
 	std::vector<uint16_t> boardData;
+
+	std::vector<Board> children;
+	
+
+	int depth;
+	int cost;
+	int totalCost;
+
+	Board& parent;
 };
 
 

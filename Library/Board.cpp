@@ -4,6 +4,7 @@ Board::Board(const int _sizeColumn, const int _sizeRow) : boardData(_sizeColumn*
 {
 	sizeRow = _sizeRow;
 	sizeColumn = _sizeColumn;
+	parent = NULL;
 }
 
 Board::Board(const Board& board): sizeColumn(board.sizeColumn), sizeRow(board.sizeRow), boardData(this->GetColumnSize()*this->GetRowSize())

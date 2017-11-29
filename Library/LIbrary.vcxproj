@@ -137,6 +137,7 @@
     <ClCompile Include="FileLoader.cpp" />
     <ClCompile Include="Index.cpp" />
     <ClCompile Include="Logic.cpp" />
+    <ClCompile Include="Solution.cpp" />
     <ClCompile Include="Solver.cpp" />
     <ClCompile Include="SolverBFS.cpp" />
   </ItemGroup>
@@ -146,6 +147,7 @@
     <ClInclude Include="FileLoader.h" />
     <ClInclude Include="Index.h" />
     <ClInclude Include="Logic.h" />
+    <ClInclude Include="Solution.h" />
     <ClInclude Include="Solver.h" />
     <ClInclude Include="SolverBFS.h" />
   </ItemGroup>

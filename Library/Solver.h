@@ -3,6 +3,7 @@
 #define SOLVER_H
 
 #include "Board.h"
+#include "Solution.h"
 
 class Solver
 {
@@ -10,10 +11,12 @@ public:
 	Solver(Board _boardToSolve, Board _boardSolved);
 	virtual ~Solver() = default;
 
+
 	// Zwracanie stringa jako rozwiązanie. Format zwracany jeszcze do uzgodnienia : )
-	virtual std::string SolveBoard() = 0;
+	virtual Solution SolveBoard(std::string order) = 0;
 
 protected:
+	Solution solution();
 	Board  boardToSolve;
 	Board  boardSolved;
 };

@@ -45,6 +45,9 @@
     <ClCompile Include="SolverBFS.cpp">
       <Filter>Source Files\Classes\Solver</Filter>
     </ClCompile>
+    <ClCompile Include="Solution.cpp">
+      <Filter>Source Files\Classes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Board.h">
@@ -67,6 +70,9 @@
     </ClInclude>
     <ClInclude Include="Solver.h">
       <Filter>Source Files\Classes\Solver</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution.h">
+      <Filter>Source Files\Classes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
