@@ -1,7 +1,7 @@
 #include "Node.h"
 
 
-Node::Node(Board _parent, Board _self): parent(_parent), self(_self), visited(false)
+Node::Node(Board _parent, Board _self): parent(_parent), self(_self), visited(false), depth(0)
 {
 }
 
@@ -28,4 +28,34 @@ bool Node::IsVisited() const
 int Node::GetDepth() const
 {
 	return depth;
+}
+
+Node Node::GetLeftChild()
+{
+	return *this;
+}
+
+Node Node::GetRightChild()
+{
+	return *this;
+}
+
+Node Node::GetUpChild()
+{
+	return *this;
+}
+
+Node Node::GetDownChild()
+{
+	return *this;
+}
+
+int Node::GetDepth()
+{
+	return 0;
+}
+
+std::string Node::GetPath()
+{
+	return std::string();
 }

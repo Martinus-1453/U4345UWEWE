@@ -1,10 +1,11 @@
 ﻿#include "Solver.h"
 
-Solver::Solver(Board _boardToSolve, Board _boardSolved): nodeToSolve(), nodeSolved()
+Solver::Solver(Node _nodeToSolve, Board _boardSolved): nodeToSolve(_nodeToSolve), boardSolved(_boardSolved)
 {
 }
 
-bool Solver::IsSolved(Board board)
+bool Solver::IsSolved(Node _node)
 {
+	return true;
 }
 

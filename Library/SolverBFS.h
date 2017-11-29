@@ -17,7 +17,7 @@ private:
 	Node currentNode;
 
 public:
-	SolverBFS(Node& _nodeToSolve, Node& _nodeSolved);
+	SolverBFS(Node _nodeToSolve, Board _nodeSolved);
 	::Solution SolveNode(std::string order) override;
 };
 

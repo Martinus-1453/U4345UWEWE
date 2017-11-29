@@ -1,9 +1,14 @@
+
+
+#pragma once
+#ifndef FILEWRITER_H
+#define FILEWRITER_H
+
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <vector>
 
-#pragma once
 class FileWriter
 {
 public:
@@ -12,4 +17,8 @@ public:
 
 	void LoadToFile(std::string path, std::vector<std::string> stringVec);
 };
+
+#endif // FILEWRITER_H
+
+
 

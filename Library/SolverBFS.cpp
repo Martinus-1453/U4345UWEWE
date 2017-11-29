@@ -1,8 +1,9 @@
 ﻿#include "SolverBFS.h"
 
-SolverBFS::SolverBFS(Node& _nodeToSolve, Node& _nodeSolved): Solver(_nodeToSolve, _nodeSolved), currentNode(_nodeToSolve)
+
+SolverBFS::SolverBFS(Node _nodeToSolve, Board _nodeSolved): Solver(_nodeToSolve, _nodeSolved), currentNode(_nodeToSolve)
 {
-	this->nodeSolved = _nodeSolved;
+	this->boardSolved = _nodeSolved;
 	this->nodeToSolve = _nodeToSolve;
 }
 
@@ -29,11 +30,11 @@ Solution SolverBFS::SolveNode(std::string _order)
 
 void SolverBFS::ExplorePaths(Node node) {
 	
-	solution.maxDepth = std::max(solution.maxDepth, node.getDepth());
+	solution.maxDepth = std::max(solution.maxDepth, node.GetDepth());
 	
 	if (IsSolved(node)) {
 		solution.solved = true;
-		solution.path = node.getPath();
+		solution.path = node.GetPath();
 		return;
 	}
 

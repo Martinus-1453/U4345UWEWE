@@ -1,12 +1,12 @@
 #include "BoardManager.h"
 
 
-BoardManager::BoardManager(int columns, int rows): mBoard(columns, rows), solvedBoard(columns, rows), currentSolver(nullptr), BFS(mBoard, solvedBoard)
+BoardManager::BoardManager(int columns, int rows): mBoard(columns, rows), solvedBoard(columns, rows), currentSolver(nullptr), BFS(Node(Board(0,0),mBoard), solvedBoard)
 {
 	SetOrederedValues();
 }
 
-BoardManager::BoardManager(std::string boardPath, std::string solvePath): mBoard(4, 4), solvedBoard(4, 4), currentSolver(nullptr), BFS(mBoard,solvedBoard)
+BoardManager::BoardManager(std::string boardPath, std::string solvePath): mBoard(4, 4), solvedBoard(4, 4), currentSolver(nullptr), BFS(Node(Board(0, 0), mBoard),solvedBoard)
 {
 }
 
