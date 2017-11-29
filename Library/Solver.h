@@ -16,7 +16,8 @@ public:
 	virtual Solution SolveBoard(std::string order) = 0;
 
 protected:
-	Solution solution();
+	Solution solution;
+	bool IsSolved(Board board);
 	Board  boardToSolve;
 	Board  boardSolved;
 };

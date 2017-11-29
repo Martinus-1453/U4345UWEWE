@@ -1,6 +1,6 @@
 ﻿#include "SolverBFS.h"
 
-SolverBFS::SolverBFS(Board& _boardToSolve, Board& _boardSolved): Solver(_boardToSolve, _boardSolved)
+SolverBFS::SolverBFS(Board& _boardToSolve, Board& _boardSolved): Solver(_boardToSolve, _boardSolved), currentBoard(_boardToSolve)
 {
 	this->boardSolved = _boardSolved;
 	this->boardToSolve = _boardToSolve;
@@ -14,26 +14,26 @@ Solution SolverBFS::SolveBoard(std::string _order)
 
 
 
-	hashBoard(currentBoard); // czyli ktora
+	HashBoard(currentBoard); // czyli ktora
 
 	while (!front.empty() && !solution.solved) {
 		currentBoard = front.front();
 		front.pop();
-		explorePaths(currentBoard);
+		ExplorePaths(currentBoard);
 	}
 	
 	auto endTime = std::chrono::high_resolution_clock::now();
 	auto timeDiff = std::chrono::duration_cast<std::chrono::microseconds>(endTime - startTime).count();
-	double solution.time = (double)timeDiff / 1000.0;
+	solution.time = (double)timeDiff / 1000.0;
 
 	return solution;
 }
 
-void SolverBFS::explorePaths(Board board) {
+void SolverBFS::ExplorePaths(Board board) {
 	
 	solution.maxDepth = std::max(solution.maxDepth, board.getDepth());
 	
-	if (isSolved(board)) {
+	if (IsSolved(board)) {
 		solution.solved = true;
 		solution.path = board.getPath();
 		return;
@@ -41,22 +41,22 @@ void SolverBFS::explorePaths(Board board) {
 
 	for (char c : order) {
 		if (c == 'L') {
-			hashBoard(board.GetLeftChild());
+			HashBoard(board.GetLeftChild());
 		}
 		if (c == 'R') {
-			hashBoard(board.GetRightChild());
+			HashBoard(board.GetRightChild());
 		}
 		if (c == 'U') {
-			hashBoard(board.GetUpChild());
+			HashBoard(board.GetUpChild());
 		}
 		if (c == 'D') {
-			hashBoard(board.GetDownChild());
+			HashBoard(board.GetDownChild());
 		}
 	}
 	solution.finishedNum++;
 }
 
-void SolverBFS::hashBoard(Board board) {
+void SolverBFS::HashBoard(Board board) {
 	if (board != NULL && explored.add(board)) {
 		solution.visitedNum++;
 		front.push(board);

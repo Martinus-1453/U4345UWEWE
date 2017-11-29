@@ -10,17 +10,15 @@
 class SolverBFS : public Solver
 {
 private:
-	Solution solution;
-	void explorePaths(Board board);
-	void hashBoard(Board board);
+	void ExplorePaths(Board board);
+	void HashBoard(Board board);
 	std::string order;
 	std::queue<Board> front;
 	Board currentBoard;
 
 public:
 	SolverBFS(Board& _boardToSolve,Board& _boardSolved);
-
-	Solution SolveBoard(std::string order) override;
+	::Solution SolveBoard(std::string order) override;
 };
 
 #endif // SOLVERBFS_H
