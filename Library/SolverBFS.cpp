@@ -1,6 +1,6 @@
 ﻿#include "SolverBFS.h"
 
-SolverBFS::SolverBFS(Node& _nodeToSolve, Node& _nodeSolved): Solver(_nodeSolve, _nodeSolved), currentNode(_nodeToSolve)
+SolverBFS::SolverBFS(Node& _nodeToSolve, Node& _nodeSolved): Solver(_nodeToSolve, _nodeSolved), currentNode(_nodeToSolve)
 {
 	this->nodeSolved = _nodeSolved;
 	this->nodeToSolve = _nodeToSolve;
