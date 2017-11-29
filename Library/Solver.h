@@ -8,7 +8,7 @@
 class Solver
 {
 public:
-	Solver(Node _boardToSolve, Node _boardSolved);
+	Solver(Node _nodeToSolve, Node _nodeSolved);
 	virtual ~Solver() = default;
 
 
@@ -18,8 +18,8 @@ public:
 protected:
 	Solution solution;
 	bool IsSolved(Node node);
-	Node  boardToSolve;
-	Node  boardSolved;
+	Node  nodeToSolve;
+	Node  nodeSolved;
 };
 
 #endif // SOLVER_H

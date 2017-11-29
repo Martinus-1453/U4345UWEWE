@@ -1,9 +1,9 @@
 ﻿#include "SolverBFS.h"
 
-SolverBFS::SolverBFS(Node& _boardToSolve, Node& _boardSolved): Solver(_boardToSolve, _boardSolved), currentNode(_boardToSolve)
+SolverBFS::SolverBFS(Node& _nodeToSolve, Node& _nodeSolved): Solver(_nodeSolve, _nodeSolved), currentNode(_nodeToSolve)
 {
-	this->boardSolved = _boardSolved;
-	this->boardToSolve = _boardToSolve;
+	this->nodeSolved = _nodeSolved;
+	this->nodeToSolve = _nodeToSolve;
 }
 
 Solution SolverBFS::SolveNode(std::string _order)
@@ -11,8 +11,6 @@ Solution SolverBFS::SolveNode(std::string _order)
 	auto startTime = std::chrono::high_resolution_clock::now();
 	
 	this->order = _order;
-
-
 
 	HashNode(currentNode); // czyli ktora
 
@@ -41,16 +39,16 @@ void SolverBFS::ExplorePaths(Node node) {
 
 	for (char c : order) {
 		if (c == 'L') {
-			HashBoard(node.GetLeftChild());
+			HashNode(node.GetLeftChild());
 		}
 		if (c == 'R') {
-			HashBoard(node.GetRightChild());
+			HashNode(node.GetRightChild());
 		}
 		if (c == 'U') {
-			HashBoard(node.GetUpChild());
+			HashNode(node.GetUpChild());
 		}
 		if (c == 'D') {
-			HashBoard(node.GetDownChild());
+			HashNode(node.GetDownChild());
 		}
 	}
 	solution.finishedNum++;

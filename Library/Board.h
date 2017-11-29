@@ -48,15 +48,11 @@ public:
 private:
 	int sizeColumn, sizeRow;
 	std::vector<uint16_t> boardData;
-
 	
-	
-
 	int depth;
 	int cost;
 	int totalCost;
 
-	
 };
 
 
