@@ -135,6 +135,7 @@
     <ClCompile Include="Board.cpp" />
     <ClCompile Include="BoardManager.cpp" />
     <ClCompile Include="FileLoader.cpp" />
+    <ClCompile Include="FileWriter.cpp" />
     <ClCompile Include="Index.cpp" />
     <ClCompile Include="Logic.cpp" />
     <ClCompile Include="Solution.cpp" />
@@ -145,6 +146,7 @@
     <ClInclude Include="Board.h" />
     <ClInclude Include="BoardManager.h" />
     <ClInclude Include="FileLoader.h" />
+    <ClInclude Include="FileWriter.h" />
     <ClInclude Include="Index.h" />
     <ClInclude Include="Logic.h" />
     <ClInclude Include="Solution.h" />

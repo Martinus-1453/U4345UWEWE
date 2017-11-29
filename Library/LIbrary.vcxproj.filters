@@ -48,6 +48,9 @@
     <ClCompile Include="Solution.cpp">
       <Filter>Source Files\Classes</Filter>
     </ClCompile>
+    <ClCompile Include="FileWriter.cpp">
+      <Filter>Source Files\Classes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Board.h">
@@ -72,6 +75,9 @@
       <Filter>Source Files\Classes\Solver</Filter>
     </ClInclude>
     <ClInclude Include="Solution.h">
+      <Filter>Source Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="FileWriter.h">
       <Filter>Source Files\Classes</Filter>
     </ClInclude>
   </ItemGroup>

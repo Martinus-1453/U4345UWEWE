@@ -6,7 +6,7 @@ class Solution
 public:
 	int finishedNum;
 	int visitedNum;
-	int time;
+	double time;
 	int maxDepth;
 	bool solved;
 	std::string path;
