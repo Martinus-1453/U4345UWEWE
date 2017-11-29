@@ -19,6 +19,9 @@
     <Filter Include="Source Files\Classes\Solver">
       <UniqueIdentifier>{a04bb6dc-7890-4577-85f9-fd24395a754d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Classes\Node">
+      <UniqueIdentifier>{b9575daf-107f-45b7-a4fe-b711fa86aaf7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -51,6 +54,9 @@
     <ClCompile Include="FileWriter.cpp">
       <Filter>Source Files\Classes</Filter>
     </ClCompile>
+    <ClCompile Include="Node.cpp">
+      <Filter>Source Files\Classes\Node</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Board.h">
@@ -79,6 +85,9 @@
     </ClInclude>
     <ClInclude Include="FileWriter.h">
       <Filter>Source Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Node.h">
+      <Filter>Source Files\Classes\Node</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
