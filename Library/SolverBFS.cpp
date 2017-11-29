@@ -55,8 +55,6 @@ void SolverBFS::ExplorePaths(Node node) {
 }
 
 void SolverBFS::HashNode(Node node) {
-	if (node != NULL && explored.add(node)) {
 		solution.visitedNum++;
 		front.push(node);
 	}
-}
