@@ -4,7 +4,7 @@ Board::Board(const int _sizeColumn, const int _sizeRow) : boardData(_sizeColumn*
 {
 	sizeRow = _sizeRow;
 	sizeColumn = _sizeColumn;
-	parent = NULL;
+	
 }
 
 Board::Board(const Board& board): sizeColumn(board.sizeColumn), sizeRow(board.sizeRow), boardData(this->GetColumnSize()*this->GetRowSize())
@@ -117,22 +117,4 @@ void Board::SetSizeRow(const int _sizeRow)
 void Board::ResizeBoardData()
 {
 	this->boardData.resize(sizeRow*sizeColumn);
-}
-
-//TODO CHILDREN
-
-Board Board::GetLeftChild() {
-	return *this;
-}
-
-Board Board::GetRightChild() {
-	return *this;
-}
-
-Board Board::GetUpChild() {
-	return *this;
-}
-
-Board Board::GetDownChild() {
-	return *this;
 }

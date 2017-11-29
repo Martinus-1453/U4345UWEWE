@@ -29,7 +29,7 @@ public:
 	int getDepth() { return depth; }
 	int getTotalCost() { return totalCost; }
 	int getCost() { return cost; }
-	Board getParent() { return parent; }
+	
 	
 	// Setters
 	void SetIndex(const int column, const int row, uint16_t value);
@@ -43,25 +43,20 @@ public:
 	void setDepth(int _depth) { this->depth = _depth; }
 	void setCost(int _cost) { this->cost = _cost; }
 	void setTotalCost(int _totalCost) { this->totalCost = _totalCost; }
-	void setParent(Board _parent) { this->parent = _parent; }
-
-	Board GetDownChild();
-	Board GetLeftChild();
-	Board GetRightChild();
-	Board GetUpChild();
+	
 
 private:
 	int sizeColumn, sizeRow;
 	std::vector<uint16_t> boardData;
 
-	std::vector<Board> children;
+	
 	
 
 	int depth;
 	int cost;
 	int totalCost;
 
-	Board& parent;
+	
 };
 
 

@@ -1,12 +1,12 @@
 ﻿#include "SolverBFS.h"
 
-SolverBFS::SolverBFS(Board& _boardToSolve, Board& _boardSolved): Solver(_boardToSolve, _boardSolved), currentBoard(_boardToSolve)
+SolverBFS::SolverBFS(Node& _boardToSolve, Node& _boardSolved): Solver(_boardToSolve, _boardSolved), currentNode(_boardToSolve)
 {
 	this->boardSolved = _boardSolved;
 	this->boardToSolve = _boardToSolve;
 }
 
-Solution SolverBFS::SolveBoard(std::string _order)
+Solution SolverBFS::SolveNode(std::string _order)
 {
 	auto startTime = std::chrono::high_resolution_clock::now();
 	
@@ -14,12 +14,12 @@ Solution SolverBFS::SolveBoard(std::string _order)
 
 
 
-	HashBoard(currentBoard); // czyli ktora
+	HashNode(currentNode); // czyli ktora
 
 	while (!front.empty() && !solution.solved) {
-		currentBoard = front.front();
+		currentNode = front.front();
 		front.pop();
-		ExplorePaths(currentBoard);
+		ExplorePaths(currentNode);
 	}
 	
 	auto endTime = std::chrono::high_resolution_clock::now();
@@ -29,36 +29,36 @@ Solution SolverBFS::SolveBoard(std::string _order)
 	return solution;
 }
 
-void SolverBFS::ExplorePaths(Board board) {
+void SolverBFS::ExplorePaths(Node node) {
 	
-	solution.maxDepth = std::max(solution.maxDepth, board.getDepth());
+	solution.maxDepth = std::max(solution.maxDepth, node.getDepth());
 	
-	if (IsSolved(board)) {
+	if (IsSolved(node)) {
 		solution.solved = true;
-		solution.path = board.getPath();
+		solution.path = node.getPath();
 		return;
 	}
 
 	for (char c : order) {
 		if (c == 'L') {
-			HashBoard(board.GetLeftChild());
+			HashBoard(node.GetLeftChild());
 		}
 		if (c == 'R') {
-			HashBoard(board.GetRightChild());
+			HashBoard(node.GetRightChild());
 		}
 		if (c == 'U') {
-			HashBoard(board.GetUpChild());
+			HashBoard(node.GetUpChild());
 		}
 		if (c == 'D') {
-			HashBoard(board.GetDownChild());
+			HashBoard(node.GetDownChild());
 		}
 	}
 	solution.finishedNum++;
 }
 
-void SolverBFS::HashBoard(Board board) {
-	if (board != NULL && explored.add(board)) {
+void SolverBFS::HashNode(Node node) {
+	if (node != NULL && explored.add(node)) {
 		solution.visitedNum++;
-		front.push(board);
+		front.push(node);
 	}
 }
