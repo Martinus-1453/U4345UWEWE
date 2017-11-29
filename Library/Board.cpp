@@ -118,3 +118,21 @@ void Board::ResizeBoardData()
 {
 	this->boardData.resize(sizeRow*sizeColumn);
 }
+
+//TODO CHILDREN
+
+Board Board::GetLeftChild() {
+	return *this;
+}
+
+Board Board::GetRightChild() {
+	return *this;
+}
+
+Board Board::GetUpChild() {
+	return *this;
+}
+
+Board Board::GetDownChild() {
+	return *this;
+}

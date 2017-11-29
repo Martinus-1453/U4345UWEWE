@@ -4,7 +4,6 @@ SolverBFS::SolverBFS(Board& _boardToSolve, Board& _boardSolved): Solver(_boardTo
 {
 	this->boardSolved = _boardSolved;
 	this->boardToSolve = _boardToSolve;
-	
 }
 
 Solution SolverBFS::SolveBoard(std::string _order)
@@ -15,13 +14,11 @@ Solution SolverBFS::SolveBoard(std::string _order)
 	
 	hashBoard(currentBoard); // czyli ktora
 
-		while (!front.empty() && !solved) {
-			currentBoard = front.front();
-			front.pop();
-			explorePaths(currentBoard);
-		}
-	
-
+	while (!front.empty() && !solved) {
+		currentBoard = front.front();
+		front.pop();
+		explorePaths(currentBoard);
+	}
 	//end time
 
 	return solution;
@@ -51,9 +48,7 @@ void SolverBFS::explorePaths(Board board) {
 			hashBoard(board.GetDownChild());
 		}
 	}
-
 	solution.finishedNum++;
-	
 }
 
 void SolverBFS::hashBoard(Board board) {
@@ -61,5 +56,4 @@ void SolverBFS::hashBoard(Board board) {
 		solution.visitedNum++;
 		front.push(board);
 	}
-
 }

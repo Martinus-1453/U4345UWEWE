@@ -47,7 +47,7 @@ public:
 
 	Board GetDownChild();
 	Board GetLeftChild();
-	Board GeRightChild();
+	Board GetRightChild();
 	Board GetUpChild();
 
 private:
