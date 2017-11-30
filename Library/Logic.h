@@ -3,6 +3,7 @@
 #define MOVELOGIC_H
 
 #include "Board.h"
+#include "Index.h"
 
 enum class Direction {L,R,U,D};
 
@@ -10,6 +11,7 @@ class Logic
 {
 public:
 	static bool Move(Board* board, Direction direction, int index_x, int index_y);
+	static bool Move(Board* board, Direction direction, Index index);
 	
 private:
 	static void MoveLeft(Board* board, int index_x, int index_y);

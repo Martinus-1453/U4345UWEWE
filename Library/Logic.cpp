@@ -38,6 +38,11 @@ bool Logic::Move(Board * board, Direction direction, int index_x, int index_y)
 	return false;
 }
 
+bool Logic::Move(Board* board, Direction direction, Index index)
+{
+	return Move(board, direction, index.GetColumn(), index.GetRow());
+}
+
 void Logic::MoveLeft(Board* board, int index_x, int index_y)
 {
 	
