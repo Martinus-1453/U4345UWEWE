@@ -1,4 +1,5 @@
 #include "Node.h"
+#include "Logic.h"
 
 
 Node::Node(Board _parent, Board _self): parent(_parent), self(_self), visited(false), depth(0)
@@ -33,7 +34,7 @@ int Node::GetDepth() const
 Node Node::GetLeftChild()
 {
 	Board temp = this->GetSelf();
-	Logic::Move(temp, Direction::L, temp.GetZeroIndex());
+	Logic::Move(&temp, Direction::L, temp.GetZeroIndex());
 	return Node(this->GetSelf(), temp);
 }
 
