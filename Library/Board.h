@@ -13,6 +13,12 @@ public:
 	Board(const int _sizeColumn, const int _sizeRow);
 	Board(const Board& board);
 	Board& operator=(Board other);
+
+
+	friend bool operator==(const Board& lhs, const Board& rhs);
+
+	friend bool operator!=(const Board& lhs, const Board& rhs);
+
 	// Logic
 	void SwapIndicies(const int index1_c, const int index1_r, const int index2_c, const int index2_r);
 	void SwapIndicies(const Index index1, const Index index2);

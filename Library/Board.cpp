@@ -118,3 +118,13 @@ void Board::ResizeBoardData()
 {
 	this->boardData.resize(sizeRow*sizeColumn);
 }
+
+bool operator==(const Board& lhs, const Board& rhs)
+{
+	return lhs.boardData == rhs.boardData;
+}
+
+bool operator!=(const Board& lhs, const Board& rhs)
+{
+	return !(lhs == rhs);
+}
