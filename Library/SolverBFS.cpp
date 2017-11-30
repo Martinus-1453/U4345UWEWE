@@ -35,7 +35,6 @@ void SolverBFS::ExplorePaths(Node node) {
 	if (IsSolved(node)) {
 		solution.solved = true;
 		solution.path = node.GetPath();
-		return;
 	}
 
 	for (char c : order) {

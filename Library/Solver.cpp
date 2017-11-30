@@ -6,6 +6,6 @@ Solver::Solver(Node _nodeToSolve, Board _boardSolved): nodeToSolve(_nodeToSolve)
 
 bool Solver::IsSolved(Node _node)
 {
-	return true;
+	return boardSolved == _node.GetSelf();
 }
 

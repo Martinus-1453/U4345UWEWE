@@ -5,6 +5,7 @@
 #include "Node.h"
 #include "Solution.h"
 
+
 class Solver
 {
 public:

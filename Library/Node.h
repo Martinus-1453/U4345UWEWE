@@ -3,6 +3,7 @@
 #define NODE_H
 
 #include "Board.h"
+#include "Logic.h"
 #include <iostream>
 
 class Node
