@@ -32,7 +32,9 @@ int Node::GetDepth() const
 
 Node Node::GetLeftChild()
 {
-	return *this;
+	Board temp = this->GetSelf();
+	Logic::Move(temp, Direction::L, temp.GetZeroIndex());
+	return Node(this->GetSelf(), temp);
 }
 
 Node Node::GetRightChild()
