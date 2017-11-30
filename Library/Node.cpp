@@ -57,5 +57,5 @@ int Node::GetDepth()
 
 std::string Node::GetPath()
 {
-	return std::string();
+	return " ";
 }

@@ -52,6 +52,7 @@ void SolverBFS::ExplorePaths(Node node) {
 			HashNode(node.GetDownChild());
 		}
 	}
+	std::cout << "a";
 	solution.finishedNum++;
 }
 

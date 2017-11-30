@@ -17,7 +17,7 @@ void BoardManager::RandomizeValues()
 void BoardManager::SetBoard(std::string path)
 {
 	FileLoader::LoadFile(path, mBoard);
-	//TODO SOLVEDBOARD, to make dimensions same
+
 	solvedBoard.SetSizeColumn(mBoard.GetColumnSize());
 	solvedBoard.SetSizeRow(mBoard.GetRowSize());
 	solvedBoard.ResizeBoardData();
@@ -27,6 +27,11 @@ void BoardManager::SetBoard(std::string path)
 void BoardManager::SetSolver(Solver* newSolver)
 {
 	currentSolver = newSolver;
+}
+
+void BoardManager::Solve() {
+	solution = currentSolver->SolveNode("LUDR");
+
 }
 
 void BoardManager::SetOrederedValues()

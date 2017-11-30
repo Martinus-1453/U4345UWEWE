@@ -5,6 +5,7 @@
 #include "Logic.h"
 #include "FileLoader.h"
 #include "Solver.h"
+#include "Solution.h"
 // Solve Methods
 #include "SolverBFS.h"
 
@@ -39,10 +40,13 @@ public:
 
 	void SetSolver(Solver* newSolver);
 
+	void Solve();
+
 private:
 	Board mBoard;
 	Board solvedBoard;
 	Solver* currentSolver;
+	Solution solution;
 	// Solvers
 	SolverBFS BFS;
 
