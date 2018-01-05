@@ -22,8 +22,8 @@ namespace Perceptron
             _numNeurons = 100;
             _numInputData = 5;
             _numOutputData = 5;
-            _numLearnNeurons = 5;
-            _learnRate = 0.0001;
+            _numLearnNeurons = 8;
+            _learnRate = 0.001;
             _inputData = new double[_numInputData];
             _expectedOutput = new double[_numOutputData];
             _inputWeights = new double[_numLearnNeurons, _numNeurons];
@@ -36,7 +36,8 @@ namespace Perceptron
             var rand = new Random();
             for (var i = 0; i < _numInputData; i++)
             {
-                _inputData[i] = rand.Next(1, 100) + (double) rand.Next(1, 10) / 10;
+                //_inputData[i] = rand.Next(1, 100) + (double) rand.Next(1, 10) / 10;
+                _inputData[i] = rand.NextDouble() * (100 - 1) + 1;
                 _expectedOutput[i] = Math.Sqrt(_inputData[i]);
             }
             for (var i = 0; i < _numNeurons; i++)

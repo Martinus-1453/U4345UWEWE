@@ -9,7 +9,7 @@ namespace ConsoleApp
         {
             var network = new NeuralNetwork();
             network.InitRandom();
-            network.Execute(100000);
+            network.Execute(40000);
             Console.ReadKey();
         }
     }
