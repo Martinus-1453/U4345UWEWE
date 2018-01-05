@@ -1,16 +1,16 @@
-﻿using SISE_TWO;
-using System;
-namespace CodingBackProp
+﻿using System;
+using Perceptron;
+
+namespace ConsoleApp
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            NeuralNet network = new NeuralNet();
-            network.GenerateRandom();
-            network.Run(100000);
+            var network = new NeuralNetwork();
+            network.InitRandom();
+            network.Execute(100000);
             Console.ReadKey();
         }
-        
     }
 }
